@@ -2,7 +2,7 @@
   "name": "fix-build-grow",
   "private": true,
   "version": "0.1.0",
-  "description": "Home Improvement & DIY affiliate site powered by Hugo and Netlify",
+  "description": "Home improvement and DIY site powered by Hugo and Netlify",
   "scripts": {
     "dev": "hugo server -D",
     "build": "hugo --gc --minify"
