@@ -15,13 +15,24 @@
   "supply": {{ .Params.materials | jsonify }},
   "tool": {{ .Params.tools_required | jsonify }},
   "step": [
-    {{- range $i, $step := .Params.steps }}
-    {
-      "@type": "HowToStep",
-      "name": "Step {{ add $i 1 }}: {{$step.name}}",
-      "text": "{{$step.description}}",
-      "image": "{{$step.image | absURL}}"
-    }{{ if lt $i (sub (len .Params.steps) 1) }},{{ end }}
+    {{- with .Params.steps }}
+      {{- range $i, $step := . }}
+      {
+        "@type": "HowToStep",
+        "name": "Step {{ add $i 1 }}": {{$step.name}}",
+        "text": "{{$step.description}}",
+        "image": "{{$step.image | absURL}}"
+      }{{ if lt $i (sub (len .) 1) }},{{ end }}
+      {{- end }}
+    {{- else }}
+      {{- range $i, $step := (slice "Measure and plan" "Prepare materials" "Construct bench" "Install and finish") }}
+      {
+        "@type": "HowToStep",
+        "name": "Step {{ add $i 1 }}: {{$step}}",
+        "text": "Detailed instructions for {{$step}} step",
+        "image": "{{ .Site.BaseURL }}/images/placeholder.svg"
+      }{{ if lt $i (sub 4 1) }},{{ end }}
+      {{- end }}
     {{- end }}
   ],
   "faq": {
