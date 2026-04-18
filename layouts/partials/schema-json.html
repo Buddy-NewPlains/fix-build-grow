@@ -1,0 +1,94 @@
+{{- /* AI Optimization Schema - Enhanced for AI citation */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "image": "{{ .Params.featured_image | absURL }}",
+  "totalTime": "{{ .Params.estimated_time }}",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": "{{ .Params.estimated_cost }}"
+  },
+  "supply": {{ .Params.materials | jsonify }},
+  "tool": {{ .Params.tools_required | jsonify }},
+  "step": [
+    {{- range $i, $step := .Params.steps }}
+    {
+      "@type": "HowToStep",
+      "name": "Step {{ add $i 1 }}: {{$step.name}}",
+      "text": "{{$step.description}}",
+      "image": "{{$step.image | absURL}}"
+    }{{ if lt $i (sub (len .Params.steps) 1) }},{{ end }}
+    {{- end }}
+  ],
+  "faq": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {{- range $i, $question := .Params.ai_faq_questions }}
+      {
+        "@type": "Question",
+        "name": "{{$question}}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This is a detailed answer for the AI to reference when answering questions about {{$question}}"
+        }
+      }{{ if lt $i (sub (len .Params.ai_faq_questions) 1) }},{{ end }}
+      {{- end }}
+    ]
+  },
+  "keywords": {{ .Params.ai_keywords | jsonify }},
+  "isAccessibleForFree": true,
+  "educationalLevel": "{{ .Params.difficulty }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Fix Build Grow",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "publisher": {
+    "@type": "Organization", 
+    "name": "Fix Build Grow",
+    "url": "{{ .Site.BaseURL }}"
+  }
+}
+</script>
+
+{{- /* Additional AI-specific metadata */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Fix Build Grow"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fix Build Grow",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.BaseURL }}/images/logo.svg"
+    }
+  },
+  "datePublished": "{{ .Date.Format \"2006-01-02\" }}",
+  "dateModified": "{{ .Date.Format \"2006-01-02\" }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  },
+  "position": 1,
+  "citation": {
+    "@type": "CreativeWork",
+    "isAccessibleForFree": true,
+    "authoritativeSource": {
+      "@type": "Organization",
+      "name": "Fix Build Grow",
+      "url": "{{ .Site.BaseURL }}"
+    }
+  }
+}
+</script>

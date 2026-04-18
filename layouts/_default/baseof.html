@@ -5,7 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ if .IsHome }}{{ site.Title }} | {{ site.Params.brand.tagline }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+    <meta name="keywords" content="{{ with .Params.ai_keywords }}{{ delimit . ", " }}{{ else }}{{ site.Params.keywords }}{{ end }}">
+    <meta name="author" content="Fix Build Grow">
     <link rel="canonical" href="{{ .Permalink }}">
+    
+    {{/* AI Optimization - Open Graph for social sharing */}}
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:description" content="{{ .Description }}">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="{{ .Params.featured_image | absURL }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:site_name" content="Fix Build Grow">
+    
+    {{/* AI Optimization - Twitter Card */}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ .Title }}">
+    <meta name="twitter:description" content="{{ .Description }}">
+    <meta name="twitter:image" content="{{ .Params.featured_image | absURL }}">
+    
+    {{/* AI Optimization - Schema.org structured data */}}
+    {{ partial "schema-json.html" . }}
+    
     {{ $css := resources.Get "css/site.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">
   </head>

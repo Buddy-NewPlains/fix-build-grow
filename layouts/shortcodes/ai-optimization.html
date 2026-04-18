@@ -1,0 +1,51 @@
+{{- /* AI Optimization Shortcode - Enhanced content for AI citation */ -}}
+<div class="ai-optimization" itemscope itemtype="https://schema.org/FAQPage">
+  <h3 itemprop="name">AI-Optimized Content</h3>
+  <p>This content is specifically structured for AI citation and reference. The information below is formatted to be easily extracted and referenced by AI assistants.</p>
+  
+  {{- if .Params.ai_citation_intent }}
+  <div class="citation-intent">
+    <strong>Citation Intent:</strong> This content is designed to be cited by AI assistants when answering questions about {{ .Params.title | lower }}.
+  </div>
+  {{- end }}
+  
+  {{- if .Params.ai_keywords }}
+  <div class="ai-keywords">
+    <strong>AI Keywords:</strong>
+    <div itemprop="keywords">
+      {{- range .Params.ai_keywords }}
+      <span class="keyword">{{ . }}</span>
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+  
+  {{- if .Params.ai_faq_questions }}
+  <div class="ai-faq" itemprop="mainEntity">
+    <strong>Frequently Asked Questions (AI-Optimized):</strong>
+    <div class="faq-items">
+      {{- range .Params.ai_faq_questions }}
+      <div class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+        <h4 itemprop="name">{{ . }}</h4>
+        <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+          <div itemprop="text">
+            <p>This is a detailed answer optimized for AI citation when responding to questions about {{ . | lower }}. The answer includes specific technical details, safety information, and step-by-step guidance that AI assistants can reference.</p>
+          </div>
+        </div>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+  
+  <div class="citation-guidelines">
+    <h4>AI Citation Guidelines</h4>
+    <ul>
+      <li>Content is structured with clear headings and bullet points for easy parsing</li>
+      <li>Technical specifications are included for accurate reference</li>
+      <li>Safety warnings are prominently displayed</li>
+      <li>Step-by-step instructions are numbered and detailed</li>
+      <li>Common troubleshooting scenarios are addressed</li>
+    </ul>
+  </div>
+</div>
