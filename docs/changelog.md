@@ -2,6 +2,24 @@
 
 All notable changes to the Automated Revenue Website project will be documented in this file.
 
+## [2026-04-18] - Hugo Scaffold and GitHub Repo Created
+
+### Added
+- **Hugo Site Scaffold:** Added full content structure for tutorials, galleries, estimators, comparisons, and blog content
+- **Visual Templates:** Created homepage, list, single, estimator, and comparison layouts tailored to DIY content
+- **Starter Content:** Added example pages for mudroom tutorial, fire pit gallery, deck repair estimator, drill comparison, and seasonal maintenance
+- **Netlify Config:** Added `netlify.toml` with Hugo build settings and deploy-ready environment values
+- **GitHub Repo:** Created `https://github.com/Buddy-NewPlains/fix-build-grow`
+- **Build Validation:** Added GitHub Actions build workflow and verified local Hugo production build
+- **Netlify Handoff Notes:** Added `docs/netlify-setup.md` with import settings and remaining manual step
+
+### Changed
+- **Platform Decision:** Finalized Hugo as the static site generator for the niche
+- **Project Status:** Advanced from platform selection into deploy-ready foundation setup
+
+### Blocked
+- **Netlify Import:** Final site creation in Netlify still requires account authentication from a logged-in user or token
+
 ## [2026-04-18] - Niche Research Completed
 
 ### Added
