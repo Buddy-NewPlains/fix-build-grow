@@ -16,29 +16,35 @@
   "tool": {{ .Params.tools_required | jsonify }},
   "step": [
     {{- with .Params.steps }}
-      {{- range $i, $step := . }}
+      {{- $steps := . }}
+      {{- $lastStep := sub (len $steps) 1 }}
+      {{- range $i, $step := $steps }}
       {
         "@type": "HowToStep",
         "name": "Step {{ add $i 1 }}: {{ $step.name }}",
         "text": "{{ $step.description }}",
         "image": "{{ $step.image | absURL }}"
-      }{{- if lt $i 3 }},{{ end }}
+      }{{- if ne $i $lastStep }},{{ end }}
       {{- end }}
     {{- else }}
-      {{- range $i, $step := (slice "Measure and plan" "Prepare materials" "Construct bench" "Install and finish") }}
+      {{- $fallbackSteps := slice "Measure and plan" "Prepare materials" "Construct bench" "Install and finish" }}
+      {{- $lastFallbackStep := sub (len $fallbackSteps) 1 }}
+      {{- range $i, $step := $fallbackSteps }}
       {
         "@type": "HowToStep",
         "name": "Step {{ add $i 1 }}: {{$step}}",
         "text": "Detailed instructions for {{$step}} step",
         "image": "/images/placeholder.svg"
-      }{{- if lt $i 3 }},{{ end }}
+      }{{- if ne $i $lastFallbackStep }},{{ end }}
       {{- end }}
     {{- end }}
   ],
   "faq": {
     "@type": "FAQPage",
     "mainEntity": [
-      {{- range $i, $question := .Params.ai_faq_questions }}
+      {{- $questions := .Params.ai_faq_questions | default (slice) }}
+      {{- $lastQuestion := sub (len $questions) 1 }}
+      {{- range $i, $question := $questions }}
       {
         "@type": "Question",
         "name": "{{$question}}",
@@ -46,7 +52,7 @@
           "@type": "Answer",
           "text": "This is a detailed answer for the AI to reference when answering questions about {{$question}}"
         }
-      }{{- if lt $i 9 }},{{ end }}
+      }{{- if ne $i $lastQuestion }},{{ end }}
       {{- end }}
     ]
   },
