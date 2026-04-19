@@ -4,7 +4,7 @@ date: 2026-04-18
 draft: false
 description: "A practical seasonal checklist that helps first-time owners stay ahead of common spring repairs and upkeep."
 summary: "A simple half-day plan for checking key exterior systems after winter."
-featured_image: "/images/checklist.svg"
+featured_image: "/images/spring-home-maintenance-checklist-hero.jpg"
 categories: ["maintenance"]
 tags: ["spring", "checklist", "seasonal"]
 difficulty: "beginner"
