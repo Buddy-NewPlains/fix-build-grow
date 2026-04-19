@@ -4,7 +4,7 @@ date: 2026-04-18
 draft: false
 description: "A gallery-style page for visual storytelling, before-and-after proof, and downloadable plans."
 summary: "Ideal gallery template for outdoor inspiration content and lead generation."
-featured_image: "/images/firepit.svg"
+featured_image: "/images/backyard-fire-pit-refresh-hero.jpg"
 categories: ["outdoor living"]
 tags: ["fire pit", "backyard", "before and after"]
 difficulty: "intermediate"
