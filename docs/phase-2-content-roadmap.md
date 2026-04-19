@@ -88,6 +88,34 @@ Focus on **repair-first topical clusters** instead of broad lifestyle content. T
 20. **DIY Wall Repair Mistakes That Make Paint Touch-Ups Obvious**  
    Format: blog. Intent: trust-building support content for drywall cluster.
 
+## Current execution status
+
+### First batch in progress
+The first production batch has already been drafted but is currently blocked before commit/push.
+
+Pages prepared in working state:
+- `content/tutorials/how-to-patch-drywall-holes-the-right-way.md`
+- `content/tutorials/how-to-fix-peeling-caulk-around-a-bathtub-or-shower.md`
+- `content/tutorials/how-to-repair-a-sagging-fence-gate.md`
+- `content/estimators/drywall-repair-cost-estimator.md`
+
+Supporting template update already prepared:
+- `layouts/partials/schema-json.html` updated to safely handle variable FAQ and step data
+
+### Current blocker
+The batch is blocked on required image generation.
+- Each article must ship with at least one hero image
+- Additional explanatory images are allowed when they improve clarity
+- Current OpenClaw image generation attempts are failing with Google Gemini API responses indicating `API_KEY_INVALID` / expired key behavior
+- Because of that, the batch has not been committed or pushed yet
+
+### Immediate next action
+1. Confirm the active OpenClaw image-generation config path and reload the running service
+2. Retry hero image generation for the first four pages
+3. Wire generated image paths into front matter
+4. Re-run the Hugo build
+5. Commit and push the completed first batch
+
 ## Recommended publishing sequence
 
 ### Wave 1: Build the first strong cluster

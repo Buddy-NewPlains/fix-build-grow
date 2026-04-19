@@ -53,7 +53,7 @@
 - **Owner:** Buddy
 - **Priority:** High
 
-### 2.2 OpenClaw Content Creation Subagent 🔄 READY TO IMPLEMENT
+### 2.2 OpenClaw Content Creation Subagent 🔄 IN PROGRESS
 - [ ] **Task:** Create dedicated content creation subagent using OpenClaw
 - [ ] **Components:**
   - Content generation subagent with specialized prompts
@@ -61,12 +61,15 @@
   - Automated content formatting and optimization
   - Quality control and approval workflow
   - Explicit use of the `seo-fundamentals` skill for content-writing subagents
+  - At least one hero image per article, with additional explanatory visuals when useful
 - [ ] **Deliverable:** Content creation subagent system
-- [ ] **Success Criteria:** Subagent generates 3-5 quality articles per week in approved clusters
+- [ ] **Success Criteria:** Subagent generates 3-5 quality articles per week in approved clusters with image support
 - [ ] **Time:** 3 days
-- **Status:** 🔄 Ready to Implement
+- **Status:** 🔄 In Progress
 - **Owner:** Buddy
 - **Priority:** High
+- **Current blocker:** OpenClaw image generation is failing against Google Gemini with `API_KEY_INVALID` / expired-key behavior, so the first content batch is drafted but not yet shippable
+- **Next step:** verify the active OpenClaw image-generation config path, reload service config, and retry hero-image generation for the first batch
 
 ### 2.3 Site Maintenance Subagent
 - [ ] **Task:** Create site maintenance and posting subagent
