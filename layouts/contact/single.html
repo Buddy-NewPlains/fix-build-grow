@@ -1,0 +1,33 @@
+{{ define "main" }}
+<section class="section contact-section">
+  <div class="container contact-layout">
+    <article class="contact-main">
+      <div class="kicker">Advertising with firsthomefix.com</div>
+      <h1>{{ .Title }}</h1>
+      <p class="lede">{{ with .Params.summary }}{{ . }}{{ else }}{{ .Description }}{{ end }}</p>
+      <div class="contact-prose prose">
+        {{ .Content }}
+      </div>
+    </article>
+    <aside class="contact-sidebar">
+      <div class="card card-body">
+        <div class="eyebrow">Why advertisers reach out</div>
+        <h3>Built for practical homeowner audiences</h3>
+        <ul>
+          <li>DIY and repair-focused readers looking for tools, materials, and how-to guidance</li>
+          <li>First-time homeowners and acreage owners making purchase decisions</li>
+          <li>Content environments suited for sponsored features, affiliate campaigns, and strategic placements</li>
+        </ul>
+      </div>
+      <div class="card card-body contact-note-card">
+        <div class="eyebrow">Best fit inquiries</div>
+        <ul>
+          <li>Sponsored tutorials and educational brand integrations</li>
+          <li>Product launches, affiliate partnerships, and seasonal campaigns</li>
+          <li>Longer-term advertising relationships tied to homeowner intent</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+{{ end }}

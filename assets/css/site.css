@@ -175,6 +175,44 @@ table { width:100%; border-collapse:collapse; background:var(--surface); border:
 th, td { padding:.85rem 1rem; border-bottom:1px solid var(--border); text-align:left; }
 .notice { padding:1rem 1.1rem; background:rgba(47,111,79,.08); border-left:4px solid var(--accent); border-radius:12px; }
 .site-footer { padding:2rem 0 4rem; color:var(--muted); }
+.footer-stack { display:flex; justify-content:space-between; align-items:flex-start; gap:1.5rem; }
+.footer-links { display:flex; flex-wrap:wrap; gap:1rem; font-weight:600; }
+.footer-links a { color: var(--text); }
+.legal-section { padding-top: 3rem; }
+.legal-layout { display:grid; grid-template-columns: minmax(0, 2fr) minmax(260px, .8fr); gap:1.5rem; align-items:start; }
+.legal-card { overflow:hidden; }
+.legal-card-body { padding: 1.5rem; }
+.legal-card-body h1 { max-width:none; }
+.legal-note p, .legal-note li { color: var(--muted); }
+.contact-section { padding-top: 3rem; }
+.contact-layout { display:grid; grid-template-columns: minmax(0, 1.4fr) minmax(280px, .8fr); gap:1.5rem; align-items:start; }
+.contact-main, .contact-sidebar { min-width: 0; }
+.contact-main > h1 { max-width: none; }
+.contact-form-card { margin-top: 2rem; overflow: hidden; }
+.contact-form-body { padding: 1.5rem; }
+.contact-form-body h2 { margin-bottom: .5rem; }
+.contact-form { display:grid; gap:1rem; margin-top: 1.25rem; }
+.contact-field-grid { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:1rem; }
+.contact-form label { display:grid; gap:.45rem; font-weight:600; }
+.contact-form label span { color: var(--text); }
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  padding: .9rem 1rem;
+  font: inherit;
+  color: var(--text);
+}
+.contact-form textarea { resize: vertical; min-height: 180px; }
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: 2px solid rgba(197,106,45,.22);
+  outline-offset: 2px;
+  border-color: rgba(197,106,45,.4);
+}
+.contact-honeypot { position:absolute; left:-9999px; opacity:0; pointer-events:none; }
+.contact-sidebar { display:grid; gap:1rem; }
+.contact-note-card { background: linear-gradient(180deg, #fffaf3 0%, #f5efe5 100%); }
 @media (prefers-reduced-motion: reduce) {
   .house-remodel-sequence *, .house-remodel-sequence::before, .house-remodel-sequence::after { animation: none !important; transition: none !important; }
   .photo-shards { display:none; }
@@ -182,9 +220,9 @@ th, td { padding:.85rem 1rem; border-bottom:1px solid var(--border); text-align:
   .house-photo-after { opacity:1; }
 }
 @media (max-width: 920px) {
-  .hero-grid, .split-grid, .card-grid, .stat-grid { grid-template-columns: 1fr; }
+  .hero-grid, .split-grid, .card-grid, .stat-grid, .legal-layout, .contact-layout, .contact-field-grid { grid-template-columns: 1fr; }
   h1 { max-width:none; }
-  .section-head, .nav { align-items:flex-start; flex-direction:column; }
+  .section-head, .nav, .footer-stack { align-items:flex-start; flex-direction:column; }
   .brand-logo { height:48px; }
 }
 @media (max-width: 680px) {
