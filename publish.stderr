@@ -1,0 +1,14 @@
+creating publish (403 files)...
+uploading 403 files...
+finalizing...
+
+publish_result.site_url=https://azure-salmon-9can.here.now/
+publish_result.auth_mode=anonymous
+publish_result.api_key_source=none
+publish_result.persistence=expires_24h
+publish_result.expires_at=2026-04-21T22:01:55.277Z
+publish_result.claim_url=https://here.now/claim?slug=azure-salmon-9can&token=e7b16ae989a7ecafc6f2d0ba35eba557aa898f2999ead3cda93deb2db66868b8
+anonymous publish (expires in 24h)
+claim URL: https://here.now/claim?slug=azure-salmon-9can&token=e7b16ae989a7ecafc6f2d0ba35eba557aa898f2999ead3cda93deb2db66868b8
+claim token saved to .herenow/state.json
+on

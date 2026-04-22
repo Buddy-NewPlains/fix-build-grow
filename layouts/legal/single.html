@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="section legal-section">
+  <div class="container legal-layout">
+    <article class="card legal-card">
+      <div class="legal-card-body prose">
+        <div class="eyebrow">Legal</div>
+        <h1>{{ .Title }}</h1>
+        <p class="lede">{{ with .Params.summary }}{{ . }}{{ else }}{{ .Description }}{{ end }}</p>
+        {{ .Content }}
+      </div>
+    </article>
+    <aside class="legal-sidebar">
+      <div class="card card-body legal-note">
+        <div class="eyebrow">Quick note</div>
+        <h3>For general website use</h3>
+        <p>These pages explain the general privacy and use terms for firsthomefix.com. They are intended to support standard website legal transparency.</p>
+      </div>
+      <div class="card card-body legal-note" style="margin-top:1rem;">
+        <div class="eyebrow">Related pages</div>
+        <ul>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+{{ end }}

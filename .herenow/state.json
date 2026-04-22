@@ -1,0 +1,73 @@
+{
+  "publishes": {
+    "urban-mesa-8j62": {
+      "siteUrl": "https://urban-mesa-8j62.here.now/",
+      "claimToken": "175dc19ea4a3b9471fd9e95efc0ca1affd6f71c9b5ea9f2950e624d176147413",
+      "claimUrl": "https://here.now/claim?slug=urban-mesa-8j62&token=175dc19ea4a3b9471fd9e95efc0ca1affd6f71c9b5ea9f2950e624d176147413",
+      "expiresAt": "2026-04-20T16:10:20.088Z"
+    },
+    "flowing-kayak-hjgc": {
+      "siteUrl": "https://flowing-kayak-hjgc.here.now/"
+    },
+    "regal-scroll-xsj2": {
+      "siteUrl": "https://regal-scroll-xsj2.here.now/",
+      "claimToken": "9eeee87fac971fac9a09e33d61b0d2054390b8bcd8a3c3ef8c2a8a0a90e8cbeb",
+      "claimUrl": "https://here.now/claim?slug=regal-scroll-xsj2&token=9eeee87fac971fac9a09e33d61b0d2054390b8bcd8a3c3ef8c2a8a0a90e8cbeb",
+      "expiresAt": "2026-04-20T18:05:18.052Z"
+    },
+    "spicy-mustard-qq5z": {
+      "siteUrl": "https://spicy-mustard-qq5z.here.now/",
+      "claimToken": "7c6c5e80fee8260c74a2534c1fbbdde3ea2d518c3fc812138638375c83784106",
+      "claimUrl": "https://here.now/claim?slug=spicy-mustard-qq5z&token=7c6c5e80fee8260c74a2534c1fbbdde3ea2d518c3fc812138638375c83784106",
+      "expiresAt": "2026-04-21T00:34:36.115Z"
+    },
+    "granite-jungle-yhap": {
+      "siteUrl": "https://granite-jungle-yhap.here.now/",
+      "claimToken": "df09dc8e2a927970417676054e0c7f6e18a55871f019dcb0c2207ef64c4ecc63",
+      "claimUrl": "https://here.now/claim?slug=granite-jungle-yhap&token=df09dc8e2a927970417676054e0c7f6e18a55871f019dcb0c2207ef64c4ecc63",
+      "expiresAt": "2026-04-21T11:14:56.139Z"
+    },
+    "presto-forge-2jtc": {
+      "siteUrl": "https://presto-forge-2jtc.here.now/",
+      "claimToken": "b5b664b98a02e97fbeb8809838e4878f4505df3d9f3240564e09a7f844a4135b",
+      "claimUrl": "https://here.now/claim?slug=presto-forge-2jtc&token=b5b664b98a02e97fbeb8809838e4878f4505df3d9f3240564e09a7f844a4135b",
+      "expiresAt": "2026-04-21T12:01:33.702Z"
+    },
+    "sacred-sequin-28ha": {
+      "siteUrl": "https://sacred-sequin-28ha.here.now/",
+      "claimToken": "1a9cf4e0b4d4ce36fc940659f96b44e54d82b270842c7cd637f8939cc9784354",
+      "claimUrl": "https://here.now/claim?slug=sacred-sequin-28ha&token=1a9cf4e0b4d4ce36fc940659f96b44e54d82b270842c7cd637f8939cc9784354",
+      "expiresAt": "2026-04-21T21:59:43.280Z"
+    },
+    "azure-salmon-9can": {
+      "siteUrl": "https://azure-salmon-9can.here.now/",
+      "claimToken": "e7b16ae989a7ecafc6f2d0ba35eba557aa898f2999ead3cda93deb2db66868b8",
+      "claimUrl": "https://here.now/claim?slug=azure-salmon-9can&token=e7b16ae989a7ecafc6f2d0ba35eba557aa898f2999ead3cda93deb2db66868b8",
+      "expiresAt": "2026-04-21T22:01:55.277Z"
+    },
+    "olive-glacier-kaxq": {
+      "siteUrl": "https://olive-glacier-kaxq.here.now/",
+      "claimToken": "1b9d17a5ad70f30beed2e76851a55e73774049cce4eda20dd75c63d0d912b5e6",
+      "claimUrl": "https://here.now/claim?slug=olive-glacier-kaxq&token=1b9d17a5ad70f30beed2e76851a55e73774049cce4eda20dd75c63d0d912b5e6",
+      "expiresAt": "2026-04-21T22:21:09.795Z"
+    },
+    "clear-dory-yk38": {
+      "siteUrl": "https://clear-dory-yk38.here.now/",
+      "claimToken": "7734a7a5b2c3d539aeb38b2c9b641d85556ca79e2d9d2bb97fe501d394c2a7fe",
+      "claimUrl": "https://here.now/claim?slug=clear-dory-yk38&token=7734a7a5b2c3d539aeb38b2c9b641d85556ca79e2d9d2bb97fe501d394c2a7fe",
+      "expiresAt": "2026-04-21T22:23:17.642Z"
+    },
+    "stormy-petal-3vfr": {
+      "siteUrl": "https://stormy-petal-3vfr.here.now/",
+      "claimToken": "0c2bb8145ae200c88262a7a5843b5da8fdfa88ae4d0616b3166a6de3fee6c18b",
+      "claimUrl": "https://here.now/claim?slug=stormy-petal-3vfr&token=0c2bb8145ae200c88262a7a5843b5da8fdfa88ae4d0616b3166a6de3fee6c18b",
+      "expiresAt": "2026-04-23T22:02:58.629Z"
+    },
+    "awake-rafter-qbxf": {
+      "siteUrl": "https://awake-rafter-qbxf.here.now/",
+      "claimToken": "e144bd1244ee5db7325d433e569854bfc55f2c27744c8da85c80d8d6c4bed380",
+      "claimUrl": "https://here.now/claim?slug=awake-rafter-qbxf&token=e144bd1244ee5db7325d433e569854bfc55f2c27744c8da85c80d8d6c4bed380",
+      "expiresAt": "2026-04-23T22:56:12.779Z"
+    }
+  }
+}

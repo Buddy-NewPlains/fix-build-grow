@@ -37,13 +37,44 @@ h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); max-width: 10ch; }
 .button.secondary { background:transparent; border:1px solid var(--border); color:var(--text); box-shadow:none; }
 .card, .stat, .hero-panel { background: var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow: var(--shadow); }
 .hero-panel { padding:1rem; }
-.hero-panel img { aspect-ratio: 4 / 5; object-fit: cover; }
+.hero-panel img { width: 100%; height: auto; object-fit: contain; }
 .hero-animation-panel {
-  padding: 0;
+  padding: .9rem;
   overflow: hidden;
   background:
-    radial-gradient(circle at top, rgba(255,255,255,.72), rgba(255,255,255,0) 42%),
-    linear-gradient(180deg, #f7f1e6 0%, #f2e9dc 100%);
+    radial-gradient(circle at top, rgba(255,255,255,.76), rgba(255,255,255,0) 42%),
+    linear-gradient(180deg, #f7f1e6 0%, #ede1d0 100%);
+}
+.hero-video-shell {
+  position: relative;
+  aspect-ratio: 1280 / 698;
+  min-height: 320px;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 2px);
+  background: linear-gradient(180deg, rgba(255,255,255,.35), rgba(255,255,255,.08));
+  display: grid;
+  place-items: center;
+  padding: clamp(.5rem, 1.5vw, 1rem);
+}
+.hero-video-shell::after {
+  content: "";
+  position: absolute;
+  inset: auto 6% 2% 6%;
+  height: 18%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(47,111,79,0), rgba(47,111,79,.22));
+  filter: blur(12px);
+  pointer-events: none;
+}
+.hero-video {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+  margin: 0 auto;
 }
 .house-remodel-sequence {
   position: relative;
@@ -100,7 +131,7 @@ h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); max-width: 10ch; }
 .house-photo {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 .house-photo::after,
 .photo-shards::after {
@@ -230,4 +261,5 @@ th, td { padding:.85rem 1rem; border-bottom:1px solid var(--border); text-align:
 }
 @media (max-width: 520px) {
   .house-remodel-sequence { min-height:360px; }
+  .hero-video-shell { min-height: 220px; }
 }

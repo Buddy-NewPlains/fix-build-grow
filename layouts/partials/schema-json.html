@@ -1,11 +1,16 @@
 {{- /* AI Optimization Schema - Enhanced for AI citation */ -}}
+{{- $pageType := cond (eq .Type "legal") "WebPage" "HowTo" -}}
+{{- $pubDate := .Date.Format "2006-01-02" -}}
+{{- $modDate := .Lastmod.Format "2006-01-02" -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HowTo",
+  "@type": "{{ $pageType }}",
   "name": "{{ .Title }}",
   "description": "{{ .Description }}",
   "image": "{{ .Params.featured_image | absURL }}",
+  "url": "{{ .Permalink }}",
+  {{- if ne .Type "legal" }}
   "totalTime": "{{ .Params.estimated_time }}",
   "estimatedCost": {
     "@type": "MonetaryAmount",
@@ -59,6 +64,7 @@
   "keywords": {{ .Params.ai_keywords | jsonify }},
   "isAccessibleForFree": true,
   "educationalLevel": "{{ .Params.difficulty }}",
+  {{- end }}
   "author": {
     "@type": "Organization",
     "name": "firsthomefix.com",
@@ -91,8 +97,8 @@
       "url": "{{ .Site.BaseURL }}/images/logo.svg"
     }
   },
-  "datePublished": "{{ .Date.Format "2006-01-02" }}",
-  "dateModified": "{{ .Date.Format "2006-01-02" }}",
+  "datePublished": "{{ $pubDate }}",
+  "dateModified": "{{ $modDate }}",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ .Permalink }}"
