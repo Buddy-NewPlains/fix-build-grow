@@ -4,7 +4,7 @@ date: 2026-04-18
 draft: false
 description: "Turn a cluttered entry into a durable drop zone with bench storage, hooks, and wipe-clean finishes."
 summary: "A high-utility beginner project with strong visual payoff and clear materials planning."
-featured_image: "/images/mudroom.svg"
+featured_image: "/images/mudroom-hero2.jpg"
 categories: ["entryway", "storage"]
 tags: ["mudroom", "weekend project", "storage"]
 difficulty: "beginner"
